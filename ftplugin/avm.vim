@@ -7,8 +7,7 @@ let b:did_ftplugin = 1
 " Start in avm mode
 let g:avm_edit = 1
 
-nmap <silent> o i 
-nmap <silent> u i•
+nmap <silent> l i•
 nmap <silent> h i[  ]
 nmap <silent> t i{ }
 nmap <silent> v ro
@@ -24,8 +23,7 @@ nmap <silent> ` :call TodoEditToggle()<CR>
 function! TodoEditToggle()
   if g:avm_edit
     let g:avm_edit = 0
-    nmap <silent> o i
-    nmap <silent> u i•
+    nmap <silent> l i•
     nmap <silent> h i[  ]
     nmap <silent> t i{ }
     nmap <silent> v ro
@@ -33,12 +31,11 @@ function! TodoEditToggle()
     nmap <silent> x r 
     nmap <silent> > :call search('[')<CR>
     nmap <silent> < :call search('[', 'b')<CR>
-    nmap <silent> ] :call search('<\[\|\(•\)\|\({\)')<CR>
-    nmap <silent> [ :call search('<\[\|\(•\)\|\({\)', 'b')<CR>
+    nmap <silent> ] :call search('\<[\|\(•\)\|\({\)')<CR>
+    nmap <silent> [ :call search('\<[\|\(•\)\|\({\)', 'b')<CR>
   else
     let g:avm_edit = 1
-    unmap o
-    unmap u
+    unmap l
     unmap h
     unmap t
     unmap v

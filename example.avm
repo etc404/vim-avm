@@ -2,26 +2,24 @@
 
 [ Highlighting ]
 Highlight the following syntactical patterns:
-    ** Unordered lists
-    *1 Ordered lists
+    •lists
     [ Header Blocks ]
     {o} Todo Blocks and their states { }, {o}, {/} 
     # Comments
     Plaintext (no unique highlighting)
 
 [ Shortcuts ]
-    Create ordered list
-    Create unordered list
-    Create header block
-    Make todo block
-    Mark todo done
-    Mark todo in-progress
-    Mark todo undone
-    Jump to next header
-    Jump to previous header
-    Jump to next special element
-    Jump to previous special element
-    Shift in and out of special mode
+    Create list                         l
+    Create header block                 h
+    Make todo block                     t
+    Mark todo done                      v
+    Mark todo in-progress               n
+    Mark todo undone                    x
+    Jump to next header                 >
+    Jump to previous header             <
+    Jump to next special element        ]
+    Jump to previous special element    [
+    Shift in and out of special mode    `
 
 [ Special Mode ]
     Enables editor shortcuts, such as jumping elements and making blocks.
@@ -29,8 +27,8 @@ Highlight the following syntactical patterns:
 [ Comments ]
     Exclusively stylistic, just like tabs and ordered lists. Skipped by special element select.
 
-[ Ordered and Unordered Lists ]
-    Selected by special element select; Ordered lists use the last element select to automatically choose the number on creation.
+[ Lists ]
+    Selected by special element select.
 
 [ Header Blocks ]
     Sort of a glossary type deal; similar to ini formatting. Selected by both special element select and header select.

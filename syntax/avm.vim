@@ -1,36 +1,24 @@
 " Vim syntax file
-" Language:	.todo files
-" Maintainer:	Josep M. Bach <josep.m.bachNOSPAN@gmail.com>
-" Last Change:	2010 Sep 29
+" Language:	.avm files
+" Maintainer:	Etc404 <etc404@pm.me>
+" Last Change:	2021 Aug 11
 
 if exists("b:current_syntax")
   finish
 endif
 
-syn match       DATE            "\d\{2}\s\D\+\s\d\{4}"
-syn match       TIME            "\(\d\d\.\d\d\)"
+syn region xHeaderBlock start=/\[\ / end=/\ \]/
+syn region xTodoBlock start=/\{/ end=/\}/
+syn match xComment "#.*$"
+syn match xInt "{[0-9]+:[0-9]+}"
+syn match xList "•"
 
-syn match xProjectTag /===/ nextgroup=xProject skipwhite
-syn match xProject /\D\+/ contained
+hi def link xHeaderBlock    Statement
+hi def link xTodoBlock      Todo
+hi def link xComment        Comment
+hi def link xInt            Constant
+hi def link xList           PreProc
 
-syn match xOkValue /√/ contained
-
-syn region xOk start=/\[/ end=/\]/ contains=xOkValue
-syn match xEmpty /\[\s\]/
-syn match xRem /\[-\]/
-syn match xNow /\[\/\]/
-syn match xTitle /TODO/
-
-hi link xOk Type
-hi link xEmpty Statement
-hi link xRem Error
-hi link xNow Special
-hi link xTitle Error
-hi link xProject Identifier
-
-hi link DATE Todo
-hi link TIME Special
-
-let b:current_syntax = "todo"
+let b:current_syntax = "avm"
 
 " vim: ts=8 sw=2
