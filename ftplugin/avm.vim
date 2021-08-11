@@ -7,7 +7,7 @@ let b:did_ftplugin = 1
 " Start in avm mode
 let g:avm_edit = 1
 
-nmap <silent> l i•
+nmap <silent> l i• 
 nmap <silent> h i[  ]
 nmap <silent> t i{ }
 nmap <silent> v ro
@@ -23,7 +23,7 @@ nmap <silent> ` :call TodoEditToggle()<CR>
 function! TodoEditToggle()
   if g:avm_edit
     let g:avm_edit = 0
-    nmap <silent> l i•
+    nmap <silent> l i• 
     nmap <silent> h i[  ]
     nmap <silent> t i{ }
     nmap <silent> v ro
