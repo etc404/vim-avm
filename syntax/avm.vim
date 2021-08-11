@@ -8,7 +8,7 @@ if exists("b:current_syntax")
 endif
 
 syn region xHeaderBlock start=/\[\ / end=/\ \]/
-syn region xTodoBlock start=/\{/ end=/\}/
+syn region xTodoBlock start=/{/ end=/}/
 syn match xComment "#.*$"
 syn match xInt "{[0-9]+:[0-9]+}"
 syn match xList "•"
