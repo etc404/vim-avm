@@ -38,3 +38,6 @@ function! TodoEditToggle()
 endfunction
 
 call TodoEditToggle()
+" List and Comment fancy stuff
+set formatoptions+=cro
+setlocal comments+=:•

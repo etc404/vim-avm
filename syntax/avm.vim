@@ -7,17 +7,21 @@ if exists("b:current_syntax")
   finish
 endif
 
-syn region xHeaderBlock start=/\[\ / end=/\ \]/
+syn region xHeaderBlock start=/\[/ end=/\]/
 syn region xTodoBlock start=/{/ end=/}/
 syn match xComment "#.*$"
-syn match xInt "{[0-9]+:[0-9]+}"
+syn match xInt "[0-9]"
 syn match xList "•"
+syn region xBold start="<" end=">"
+syn match xPipe "[|\-_]"
 
-hi def link xHeaderBlock    Statement
+hi def link xHeaderBlock    Constant
 hi def link xTodoBlock      Todo
 hi def link xComment        Comment
-hi def link xInt            Constant
+hi def link xInt            String
 hi def link xList           PreProc
+hi def link xBold           PreProc
+hi def link xPipe           PreProc
 
 let b:current_syntax = "avm"
 
